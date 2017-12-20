@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/*1.元素选择器*/
+	/*2.类选择器：根据class属性选择一类元素*/
+	.female{
+		color:pink;
+	}
+	/*3.ID选择器：根据ID属性选择唯一的元素*/
+	#p4{
+		color:red;
+	}
+	/*4.选择器组：写出一组选择器，可以选中其中每个选择器所对应目标的并集*/
+	.female,#p4{
+		font-weight:bold;
+	}
+	/*5.派生选择器*/
+	/*1)选择某元素的子孙*/
+	#p5 b{
+		color:red;
+	}
+	#p5>b{
+		font-size:30px;
+	}
+</style>
+</head>
+<body>
+	<p class="female">苍老师啊苍老师</p>
+	<p>范传奇啊范传奇</p>
+	<p class="female">王克晶啊王克晶</p>
+	<p id="p4">瞧你们那点破事</p>
+	<p id="p5">
+		北京市<u>海淀区<b>北三环</b>西路</u>甲18号<b>中鼎大厦</b>B座8层
+	</p>
+	<p>
+		<a href="http://www.tmooc.cn">TMOOC</a>
+		<a href="http://doc.tedu.cn">文档</a>
+		<a href="http://www.apple.com.cn">苹果</a>
+		<a href="http://www.ganji.com">赶集网</a>
+	</p>
+	<p>
+		<input class=/>
+	</p>
+</body>
+</html>

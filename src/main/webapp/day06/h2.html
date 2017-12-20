@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>简单计算器</title>
+<script type="text/javascript">
+	function f1() {
+		var fuck=document.getElementById("d1");
+		var ss=fuck.value;
+		try {
+			fuck.value=eval(ss);
+		} catch (e) {
+			fuck.value="sb赵丽凤!";
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="d1"/>
+	<input type="button" value="=" onclick="f1()"/>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>猜数字</title>
+<script>
+	var n=parseInt(Math.random()*100);
+	function f1() {
+		var num=document.getElementById("d1").value;
+		var res=document.getElementById("d2");
+		if(isNaN(num)){
+			res.innerHTML="请输入数字!";
+		}else{
+			var num1=parseInt(num);
+			if(num1>n){
+				res.innerHTML="太大了";
+			}else if(num1<n){
+				res.innerHTML="太小了";
+			}else{
+				res.innerHTML="答对了";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="d1"/>
+	<input type="button" value="猜吧" onclick="f1()"/>
+	<span id="d2"></span>
+</body>
+</html>

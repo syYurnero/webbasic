@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>平方</title>
+<script>
+	function f1() {
+		var num=document.getElementById("d1").value;
+		var res=document.getElementById("d2");
+		if(isNaN(num)){
+			res.innerHTML="请输入数字!";
+		}else{
+			var n=parseInt(num);
+			res.innerHTML=n*n;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="d1"/>
+	<input type="button" value="平方" onclick="f1()"/>
+	=<span id="d2"></span>
+</body>
+</html>

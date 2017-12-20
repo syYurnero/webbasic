@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function f1() {
+	var num=document.getElementById("i1");
+	var res=document.getElementById("d3");
+	var num1=num.value;
+	if(num1=" "||isNaN(num1)){
+		res.innerHTML="请输入数字";
+	}else{
+		var num2=parseInt(num1);
+		res.innerHTML=num2*num2;
+	}
+}
+</script>
+</head>
+<body>
+	<input type="text" id="i1" />
+	<input type="button" id="i2" onclick="f1()" value="平方"/>=
+	<span id="d3"></span>
+</body>
+</html>

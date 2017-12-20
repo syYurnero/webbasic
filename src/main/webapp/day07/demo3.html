@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#p{
+		border: 1px solid grey;
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+  	var id;
+	function send() {
+		if(id){
+			return;
+		}
+		var n=document.getElementById("p");
+		//显示正在发送，其实什么都没做.
+		n.innerHTML="正在发送";
+		
+		id = setTimeout(function(){
+			n.innerHTML="已发送";
+			id=null;
+		}, 3000);
+		
+	}
+	function recall() {
+		var n=document.getElementById("p");
+		if(id){
+			n.innerHTML="已撤回";
+			clearTimeout(id);
+			id=null;
+		}
+			
+		
+		
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="发送" onclick="send()"/>
+	<input type="button" value="撤回" onclick="recall()"/>
+	<p id="p"></p> 
+</body>
+</html>

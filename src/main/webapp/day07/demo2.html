@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#clock{
+		border: 1px solid red;
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size:20px;
+	}
+</style>
+<script type="text/javascript">
+	var id;
+	function start() {
+		//若id非空，说明定时器已启动，不要再次启动.
+		if(id){
+			return;
+		}
+		id = setInterval(function(){
+			var d1=new Date();
+			var span=document.getElementById("s1");
+			span.innerHTML=d1.toLocaleTimeString();
+		}, 1000);
+	}
+	function stop() {
+		clearInterval(id);
+		id=null;
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="开始" onclick="start()"/>
+	<input type="button" value="停止" onclick="stop()"/>
+	<p id="clock">
+		<span id="s1"></span>
+	</p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录检查案例</title>
+<style type="text/css">
+	.ok{
+		color: green;
+	}
+	.error{
+		color: red;
+	}
+</style>
+<script type="text/javascript">
+	function f1() {
+		var code=document.getElementById("cc").value;
+		var span=document.getElementById("cc_msg");
+		var str=/^\w{5,10}$/;
+		if(str.test(code)){
+			span.className="ok";
+			return true;
+		}else{
+			span.className="error";
+			return false;
+		}
+	}
+	function f2() {
+		var pw=document.getElementById("pw").value;
+		var span=document.getElementById("pw_msg");
+		var str=/^\w{8,16}$/;
+		if(str.test(pw)){
+			span.className="ok";
+			return true;
+		}else{
+			span.className="error";
+			return false;
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<form action="http://tmooc.cn" onsubmit="return f1()+f2()==2;">
+		<p>
+			账号:
+			<input type="text" onblur="f1()" id="cc"/>
+			<span id="cc_msg">5-10位字母、数字、下划线</span>
+		</p>
+		<p>
+			密码:
+			<input type="password" onblur="f2()" id="pw"/>
+			<span id="pw_msg">8-16位字母、数字、下划线</span>
+		</p>
+		<p>
+			<input type="submit" value="注册"/>
+		</p>
+	</form>
+</body>
+</html>

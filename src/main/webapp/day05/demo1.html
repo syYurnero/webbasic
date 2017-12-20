@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript的使用方式</title>
+<!-- 2.嵌入式：在script标签内写js，该标签可以写在网页的任意位置 -->
+<script>
+	//js注释和Java一样
+	/*js注释和java一样*/
+	//1.js中的函数都是公有的
+	//2.js中函数不用声明返回值类型
+	function f2() {
+		//js中单引号和双引号一样
+		alert('赵丽凤');
+	}
+</script>
+<script type="text/javascript" src="my.js"></script>
+</head>
+<body>
+	<!--事件：就是用户的操作/动作，就是js被调用的时机，如：单击事件、双击事件。  -->
+	<!-- 1.事件定义式：在定义事件时直接写js. -->
+	<input type="button" value="按钮1" onclick="alert('赵丽凤')"/>
+	<input type="button" value="按钮2" onclick="f2()"/>
+	<input type="button" value="按钮3" onclick="f3()"/>
+</body>
+</html>

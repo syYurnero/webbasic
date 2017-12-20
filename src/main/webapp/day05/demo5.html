@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function f1() {
+		var num=document.getElementById("i1");
+		var res=document.getElementById("d3");
+		var num1=num.value;
+		if(isNaN(num1)){
+			res.innerHTML="请输入数字";
+		}else{
+			var num2=parseInt(num1);
+			if(num2<0){
+				res.innerHTML="负数没有阶乘！";
+			}else if(num2==0){
+				res.innerHTML=1;
+			}else{
+				var a=1;
+				for(var i=1;i<=num2;i++){
+					a=a*i;
+				}
+				res.innerHTML=a;
+			}
+			
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1" />
+	<input type="button" id="i2" onclick="f1()" value="阶乘"/>=
+	<span id="d3"></span>
+</body>
+</html>

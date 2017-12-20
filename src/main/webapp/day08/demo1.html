@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片轮播</title>
+</head>
+<style>
+	div{
+		border: 1px solid red;
+		width: 218px;
+		height: 218px;
+		margin: auto;
+	}
+	.hide{
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		start();
+	}
+	var id;
+	var n=0;
+	function start() {
+		
+		id=setInterval(function() {
+			n++;
+			var imgs=document.getElementsByTagName("img");
+			for(var i=0;i<imgs.length;i++){
+				imgs[i].className="hide";
+			}
+			var next=n%imgs.length;
+			imgs[next].className="";
+		}, 2000);
+	}
+	function stop() {
+		clearInterval(id);
+	}
+</script>
+<body>
+	<!-- 
+		hover:伪类选择器.
+		onmouseover:鼠标悬停事件.
+		onmouseout:鼠标离开事件.
+	 -->
+	<div onmouseover="stop();" onmouseout="start();">
+		<img src="../images/01.jpg"  >
+		<img src="../images/02.jpg" class="hide" >
+		<img src="../images/03.jpg" class="hide" >
+		<img src="../images/04.jpg" class="hide" >
+		<img src="../images/05.jpg" class="hide" >
+	</div>
+</body>
+</html>
